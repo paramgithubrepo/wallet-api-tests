@@ -1,0 +1,25 @@
+{
+  "name": "wallet-api-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cypress run",
+    "report": "cypress run --reporter cypress-mochawesome-reporter",
+    "test:dev": "cypress run --config-file cypress.config.dev.js",
+    "test:staging": "cypress run --config-file cypress.config.staging.js",
+    "test:prod": "cypress run --config-file cypress.config.prod.js",
+    "open:dev": "cypress open --config-file cypress.config.dev.js",
+    "open:staging": "cypress open --config-file cypress.config.staging.js",
+    "open:prod": "cypress open --config-file cypress.config.prod.js",
+    "report:dev": "cypress run --reporter cypress-mochawesome-reporter --config-file cypress.config.dev.js",
+    "report:staging": "cypress run --reporter cypress-mochawesome-reporter --config-file cypress.config.staging.js"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^2.1.1",
+    "cypress": "^12.0.0",
+    "cypress-mochawesome-reporter": "^3.1.0",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^5.0.1"
+  }
+}

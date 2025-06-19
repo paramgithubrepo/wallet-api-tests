@@ -1,0 +1,149 @@
+{
+  "validCredit": {
+    "transactionId": "mock-credit-001",
+    "status": "finished",
+    "outcome": "approved",
+    "createdAt": "2025-06-19T05:22:25.185862Z",
+    "updatedAt": "2025-06-19T05:27:25.185862Z"
+  },
+  "validDebit": {
+    "transactionId": "mock-debit-001",
+    "status": "finished",
+    "outcome": "approved",
+    "createdAt": "2025-06-19T05:22:25.185862Z",
+    "updatedAt": "2025-06-19T05:27:25.185862Z"
+  },
+  "approvedFast": {
+    "transactionId": "00000001-0000-0000-0000-000000000001",
+    "currency": "EUR",
+    "amount": 100.5,
+    "type": "credit",
+    "status": "finished",
+    "outcome": "approved",
+    "createdAt": "2025-06-19T05:22:25.185862Z",
+    "updatedAt": "2025-06-19T05:27:25.185862Z"
+  },
+  "pendingThenApproved": {
+    "transactionId": "00000002-0000-0000-0000-000000000002",
+    "currency": "USD",
+    "amount": 75,
+    "type": "debit",
+    "status": "finished",
+    "outcome": "approved",
+    "createdAt": "2025-06-19T05:22:25.185862Z",
+    "updatedAt": "2025-06-19T05:27:25.185862Z"
+  },
+  "pendingThenDenied": {
+    "transactionId": "00000003-0000-0000-0000-000000000003",
+    "currency": "USD",
+    "amount": 75,
+    "type": "debit",
+    "status": "finished",
+    "outcome": "denied",
+    "createdAt": "2025-06-19T05:22:25.185862Z",
+    "updatedAt": "2025-06-19T05:27:25.185862Z"
+  },
+  "pendingInitial": {
+    "transactionId": "00000004-0000-0000-0000-000000000004",
+    "currency": "AED",
+    "amount": 200,
+    "type": "credit",
+    "status": "pending",
+    "createdAt": "2025-06-19T05:22:25.185862Z"
+  },
+  "notFound": {
+    "statusCode": 404,
+    "body": {
+      "error": "Transaction not found"
+    }
+  },
+  "invalidWalletId": {
+    "statusCode": 422,
+    "body": {
+      "type": "https://stoplight.io/prism/errors#UNPROCESSABLE_ENTITY",
+      "title": "Invalid request",
+      "status": 422,
+      "detail": "Invalid wallet ID format",
+      "validation": [
+        {
+          "location": [
+            "path",
+            "walletId"
+          ],
+          "severity": "Error",
+          "code": "format",
+          "message": "walletId must match format uuid"
+        }
+      ]
+    }
+  },
+  "invalidTransactionId": {
+    "statusCode": 422,
+    "body": {
+      "type": "https://stoplight.io/prism/errors#UNPROCESSABLE_ENTITY",
+      "title": "Invalid request",
+      "status": 422,
+      "detail": "Invalid transaction ID format",
+      "validation": [
+        {
+          "location": [
+            "path",
+            "transactionId"
+          ],
+          "severity": "Error",
+          "code": "format",
+          "message": "transactionId must match format uuid"
+        }
+      ]
+    }
+  },
+  "unauthorized": {
+    "statusCode": 401,
+    "body": {
+      "error": "Unauthorized",
+      "message": "Invalid or missing token"
+    }
+  },
+  "blankToken": {
+    "statusCode": 401,
+    "body": {
+      "error": "Unauthorized",
+      "message": "Token must not be blank"
+    }
+  },
+  "internalError": {
+    "statusCode": 500,
+    "body": {
+      "error": "Internal Server Error",
+      "message": "Something went wrong"
+    }
+  },
+  "zeroAmount": {
+    "transactionId": "00000005-0000-0000-0000-000000000005",
+    "currency": "EUR",
+    "amount": 0.0,
+    "type": "credit",
+    "status": "pending",
+    "createdAt": "2025-06-19T05:22:25.185862Z"
+  },
+  "largeAmount": {
+    "transactionId": "00000006-0000-0000-0000-000000000006",
+    "currency": "USD",
+    "amount": 9999999.99,
+    "type": "credit",
+    "status": "finished",
+    "outcome": "approved",
+    "createdAt": "2025-06-19T05:22:25.185862Z",
+    "updatedAt": "2025-06-19T05:27:25.185862Z"
+  },
+  "decimalAmount": {
+    "transactionId": "00000007-0000-0000-0000-000000000007",
+    "currency": "EUR",
+    "amount": 123.456,
+    "type": "debit",
+    "status": "finished",
+    "outcome": "approved",
+    "createdAt": "2025-06-19T05:22:25.185862Z",
+    "updatedAt": "2025-06-19T05:27:25.185862Z"
+  }
+}
