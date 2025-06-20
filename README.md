@@ -1,4 +1,5 @@
 <!-- README.md -->
+> 💡 This project is not actively maintained. Please fork it instead of submitting PRs.
 
 # Wallet API Test Suite
 
